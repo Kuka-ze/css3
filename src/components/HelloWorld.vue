@@ -1,48 +1,46 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+      <li>边框border</li>
+      <li>圆角</li>
+      <li>背景</li>
+      <li>渐变</li>
+      <li>文本效果</li>
+      <li>字体</li>
     </ul>
-    <h3>Essential Links</h3>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
+      <li>2D转换</li>
+      <li>3D转换</li>
+      <li>过渡</li>
+      <li>动画</li>
+      <li>多列</li>
+      <li>用户界面</li>
     </ul>
-    <h3>Ecosystem</h3>
     <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+      <li>图片</li>
+      <li>按钮</li>
+      <li>分页</li>
+      <li>框大小</li>
+      <li>弹性盒子</li>
+      <li>媒介查询</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 ul {
   list-style-type: none;
@@ -50,9 +48,13 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  margin: 50px 50px;
+  width: 120px;
+  height: 60px;
+  /* background: rgb(204, 232, 207); */
+  background: rgb(199, 237, 204);
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
 }
 </style>
