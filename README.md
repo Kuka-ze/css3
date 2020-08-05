@@ -1,16 +1,16 @@
 # my-css-demo
 
-## Project setup
+## 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行项目
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包项目
 ```
 yarn build
 ```
