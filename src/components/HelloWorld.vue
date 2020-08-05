@@ -1,12 +1,24 @@
 <template>
   <div class="hello">
     <ul>
-      <li>边框border</li>
-      <li>圆角</li>
-      <li>背景</li>
-      <li>渐变</li>
-      <li>文本效果</li>
-      <li>字体</li>
+      <router-link to="/border">
+        <li>边框border</li>
+      </router-link>
+      <router-link to="/Radius">
+        <li>圆角</li>
+      </router-link>
+      <router-link to="/Background">
+        <li>背景</li>
+      </router-link>
+      <router-link to="/Gradients">
+        <li>渐变</li>
+      </router-link>
+      <router-link to="/Text">
+        <li>文本效果</li>
+      </router-link>
+      <router-link to="/FontFace">
+        <li>字体</li>
+      </router-link>
     </ul>
     <ul>
       <li>2D转换</li>

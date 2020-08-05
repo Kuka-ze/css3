@@ -1,6 +1,6 @@
 <template>
   <div>
-    border组件
+    字体组件
   </div>
 </template>
 

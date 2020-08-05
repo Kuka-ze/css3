@@ -1,6 +1,6 @@
 <template>
   <div>
-    border组件
+    2d组件
   </div>
 </template>
 
@@ -20,4 +20,4 @@ export default {
 </script>
 
 <style>
-</style>
+</style>template
