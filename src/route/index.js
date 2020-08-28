@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+const HomePage = () => import('../components/HomePage.vue');
 const HelloWorld = () => import('../components/HelloWorld.vue');
 const Border = () => import('../pages/border.vue');
 const Radius = () => import('../pages/radius.vue');
@@ -14,33 +15,37 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
   routes: [{
-    path: "/",
-    component: HelloWorld,
-  }, {
-    path: "/border",
-    component: Border,
-  }, {
-    path: "/Radius",
-    component: Radius,
-  }, {
-    path: "/Background",
-    component: Background,
-  }, {
-    path: "/FontFace",
-    component: FontFace,
-  }, {
-    path: "/Gradients",
-    component: Gradients,
-  }, {
-    path: "/TwoD",
-    component: TwoD,
-  }, {
-    path: "/ThreeD",
-    component: ThreeD,
-  },
-  {
-    path: "/Text",
-    component: Text,
-  },
+      path: "/",
+      component: HomePage,
+    }, {
+      path: "/HelloWorld",
+      component: HelloWorld,
+    },
+    {
+      path: "/border",
+      component: Border,
+    }, {
+      path: "/Radius",
+      component: Radius,
+    }, {
+      path: "/Background",
+      component: Background,
+    }, {
+      path: "/FontFace",
+      component: FontFace,
+    }, {
+      path: "/Gradients",
+      component: Gradients,
+    }, {
+      path: "/TwoD",
+      component: TwoD,
+    }, {
+      path: "/ThreeD",
+      component: ThreeD,
+    },
+    {
+      path: "/Text",
+      component: Text,
+    },
   ]
 })
