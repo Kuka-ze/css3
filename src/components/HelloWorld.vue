@@ -36,6 +36,11 @@
       <li>弹性盒子</li>
       <li>媒介查询</li>
     </ul>
+    <ul>
+      <router-link to="/preview">
+        <li>图片预览</li>
+      </router-link>
+    </ul>
   </div>
 </template>
 
