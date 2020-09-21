@@ -6,12 +6,15 @@ const routeList = [
     {
         name: "防抖点击",
         path: "shakeProof"
-    },{
-        name:'图片预览',
-        path:'preview'
-    },{
-        name:'html2canvas',
-        path:'html2canvas'
+    }, {
+        name: '图片预览',
+        path: 'preview'
+    }, {
+        name: 'html2canvas',
+        path: 'html2canvas'
+    }, {
+        name: 'imageNum',
+        path: 'imageNum'
     }
 ]
 

@@ -6,6 +6,9 @@ import router from './route/index'
 //main.js
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 
 //放开下面三行代码 可以使用vconsole
 // import Vconsole from 'vconsole'

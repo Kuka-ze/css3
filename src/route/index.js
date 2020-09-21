@@ -17,6 +17,9 @@ const ShakeProof = () => import('../pages/views/shakeProof.vue');
 const Preview = () => import('../pages/views/preview.vue');
 //html2canvas
 const html2Canvas = () => import('../pages/views/html2canvas.vue');
+//imageNum
+const imageNum = () => import('../pages/views/imageNum.vue');
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -64,6 +67,10 @@ export default new VueRouter({
     {
       path: "/html2canvas",
       component: html2Canvas,
+    },
+    {
+      path: "/imageNum",
+      component: imageNum,
     },
     
   ]
