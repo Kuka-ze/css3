@@ -6,9 +6,14 @@ import router from './route/index'
 //main.js
 import preview from 'vue-photo-preview'
 import 'vue-photo-preview/dist/skin.css'
+
+//放开下面三行代码 可以使用vconsole
+// import Vconsole from 'vconsole'
+// let vConsole = new Vconsole
+// export default vConsole
+
 Vue.use(preview)
 
-// Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 // Vue.prototype.axios = axios

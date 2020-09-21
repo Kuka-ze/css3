@@ -1,15 +1,11 @@
 <template>
   <div>
-    <!-- 把需要生成截图的元素放在一个元素容器里,设置一个ref -->
     <div ref="imageTofile">
-      <!-- 这里放需要截图的元素,自定义组件元素也可以 -->
-      <img src="../../images/1.jpg" width="400" />
+      <img :src="url" width="400" />
       <p>html2canvas</p>
     </div>
-    <!-- 如果需要展示截取的图片,给一个img标签 -->
-    <img :src="dataURL11" v-show="!isFakeData" />
 
-    <div class="toImage" @click="toImage">点击下载图片</div>
+    <div class="toImage" @click="kssstart">点击下载图片</div>
   </div>
 </template>
 
@@ -19,7 +15,8 @@ export default {
   name: "html2canvas",
   data() {
     return {
-      url: "",
+      url:
+        "https://fuss10.elemecdn.com/2/11/6535bcfb26e4c79b48ddde44f4b6fjpeg.jpeg",
       isFakeData: true
     };
   },
@@ -45,6 +42,42 @@ export default {
         document.body.appendChild(link);
         link.click();
       });
+    },
+    kssstart() {
+      // mymap你要截取的元素 也可以是body  整个页面  **
+      let canvasID = this.$refs.imageTofile;
+      let that = this;
+      let a = document.createElement("a");
+      html2canvas(canvasID, {
+        useCORS: true,
+        scrollY: 0,
+        removeContainer: false
+      }).then(canvas => {
+        let dom = document.body.appendChild(canvas);
+        dom.style.display = "none";
+        a.style.display = "none";
+        document.body.removeChild(dom);
+        let blob = that.dataURLToBlob(dom.toDataURL("image/png"));
+        a.setAttribute("href", URL.createObjectURL(blob));
+        a.setAttribute("download", "下载.png");
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(blob);
+        document.body.removeChild(a);
+        console.log("111111,执行完成了");
+      });
+    },
+    dataURLToBlob(dataurl) {
+      //ie 图片转格式
+      var arr = dataurl.split(","),
+        mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n);
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+      }
+      return new Blob([u8arr], { type: mime });
     }
   }
 };
@@ -52,12 +85,18 @@ export default {
 
 <style>
 .toImage {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   width: 200px;
   height: 50px;
-  border-radius: 20px;
-  text-align: center;
-  line-height: 50px;
-  border: 1px solid #000;
+  border-radius: 10px;
+  font-size: 20px;
+  background: #ee6f2d;
+  color: #fff;
   cursor: pointer;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 </style>
