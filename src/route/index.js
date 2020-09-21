@@ -11,6 +11,8 @@ const Gradients = () => import('../pages/Gradients.vue');
 const Text = () => import('../pages/text.vue');
 const TwoD = () => import('../pages/2D.vue');
 const ThreeD = () => import('../pages/3d.vue');
+// 函数防抖
+const ShakeProof = () => import('../pages/views/shakeProof.vue');
 //图片预览
 const Preview = () => import('../pages/views/preview.vue');
 Vue.use(VueRouter)
@@ -52,6 +54,10 @@ export default new VueRouter({
     {
       path: "/preview",
       component: Preview,
+    },
+    {
+      path: "/shakeProof",
+      component: ShakeProof,
     },
   ]
 })

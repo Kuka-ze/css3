@@ -1,35 +1,32 @@
 <template>
   <div class="hello">
-    <ul>
-      <router-link to="/HelloWorld">
-        <li>Css3</li>
-      </router-link>
-    </ul>
-    <div class="div1" @click="getAliyunData">防抖点击</div>
+    <div class="menus">
+      <div class="menu-item" v-for="(item,index) in routeList" :key="index">
+        <router-link :to="`/${item.path}`">
+          <div>{{item.name}}</div>
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import { Debounce } from "../util/utils";
+import  routeList  from "../mock/routeList";
+
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
-  },
+  name: "HomePage",
   data() {
-    return {};
+    return {
+      routeList: []
+    };
   },
   created() {
-    // console.log("2222", antiShake);
+    console.log("2222", routeList);
+    this.routeList = routeList;
   },
 
   methods: {
-    getAliyunData: Debounce(function() {
-      console.log("11111");
-    }, 1000),
-    getAliyunData1() {
-      console.log("111");
-    }
+
   }
 };
 </script>
@@ -39,20 +36,29 @@ export default {
   margin: 0;
   padding: 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.hello {
+  width: 100%;
+  height: 100vh;
 }
-li {
+.menus {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-item {
   display: inline-block;
-  margin: 50px 50px;
   width: 120px;
   height: 60px;
-  /* background: rgb(204, 232, 207); */
   background: rgb(199, 237, 204);
   text-align: center;
   line-height: 60px;
   cursor: pointer;
+  margin: 20px;
+}
+.menu-item a {
+  text-decoration: none;
 }
 .div1 {
   width: 200px;
