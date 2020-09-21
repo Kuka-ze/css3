@@ -9,6 +9,7 @@ export default {
   data() {
     return {
       numList: "321462",
+      /** vue js里面引入图片,必须使用require 否则无效 */
       numBg: [
         require("../../images/number/0.png"),
         require("../../images/number/1.png"),
