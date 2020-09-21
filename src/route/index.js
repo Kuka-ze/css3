@@ -15,6 +15,8 @@ const ThreeD = () => import('../pages/3d.vue');
 const ShakeProof = () => import('../pages/views/shakeProof.vue');
 //图片预览
 const Preview = () => import('../pages/views/preview.vue');
+//html2canvas
+const html2Canvas = () => import('../pages/views/html2canvas.vue');
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -59,5 +61,10 @@ export default new VueRouter({
       path: "/shakeProof",
       component: ShakeProof,
     },
+    {
+      path: "/html2canvas",
+      component: html2Canvas,
+    },
+    
   ]
 })

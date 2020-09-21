@@ -9,6 +9,9 @@ const routeList = [
     },{
         name:'图片预览',
         path:'preview'
+    },{
+        name:'html2canvas',
+        path:'html2canvas'
     }
 ]
 
