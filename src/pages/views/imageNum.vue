@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      numList: "123",
+      numList: "321462",
       numBg: [
         require("../../images/number/0.png"),
         require("../../images/number/1.png"),
