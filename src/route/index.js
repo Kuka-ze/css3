@@ -19,59 +19,64 @@ const Preview = () => import('../pages/views/preview.vue');
 const html2Canvas = () => import('../pages/views/html2canvas.vue');
 //imageNum
 const imageNum = () => import('../pages/views/imageNum.vue');
+//imageNum
+const select = () => import('../pages/views/select.vue');
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   routes: [{
-      path: "/",
-      component: HomePage,
-    }, {
-      path: "/HelloWorld",
-      component: HelloWorld,
-    },
-    {
-      path: "/border",
-      component: Border,
-    }, {
-      path: "/Radius",
-      component: Radius,
-    }, {
-      path: "/Background",
-      component: Background,
-    }, {
-      path: "/FontFace",
-      component: FontFace,
-    }, {
-      path: "/Gradients",
-      component: Gradients,
-    }, {
-      path: "/TwoD",
-      component: TwoD,
-    }, {
-      path: "/ThreeD",
-      component: ThreeD,
-    },
-    {
-      path: "/Text",
-      component: Text,
-    },
-    {
-      path: "/preview",
-      component: Preview,
-    },
-    {
-      path: "/shakeProof",
-      component: ShakeProof,
-    },
-    {
-      path: "/html2canvas",
-      component: html2Canvas,
-    },
-    {
-      path: "/imageNum",
-      component: imageNum,
-    },
-    
+    path: "/",
+    component: HomePage,
+  }, {
+    path: "/HelloWorld",
+    component: HelloWorld,
+  },
+  {
+    path: "/border",
+    component: Border,
+  }, {
+    path: "/Radius",
+    component: Radius,
+  }, {
+    path: "/Background",
+    component: Background,
+  }, {
+    path: "/FontFace",
+    component: FontFace,
+  }, {
+    path: "/Gradients",
+    component: Gradients,
+  }, {
+    path: "/TwoD",
+    component: TwoD,
+  }, {
+    path: "/ThreeD",
+    component: ThreeD,
+  },
+  {
+    path: "/Text",
+    component: Text,
+  },
+  {
+    path: "/preview",
+    component: Preview,
+  },
+  {
+    path: "/shakeProof",
+    component: ShakeProof,
+  },
+  {
+    path: "/html2canvas",
+    component: html2Canvas,
+  },
+  {
+    path: "/imageNum",
+    component: imageNum,
+  },
+  {
+    path: "/select",
+    component: select,
+  },
   ]
 })

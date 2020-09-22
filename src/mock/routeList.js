@@ -15,6 +15,9 @@ const routeList = [
     }, {
         name: 'imageNum',
         path: 'imageNum'
+    }, {
+        name: 'select',
+        path: 'select'
     }
 ]
 
