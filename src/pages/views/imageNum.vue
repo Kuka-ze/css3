@@ -1,7 +1,10 @@
 <template>
+<div>
+  <h1>将数字转换成图片展示</h1>
   <div style="display:flex;">
     <img class="num" v-for="(item,index) in numList" :key="index" :src="numBg[item]" />
   </div>
+</div>
 </template>
 
 <script>
