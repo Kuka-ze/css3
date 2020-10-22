@@ -21,6 +21,8 @@ const html2Canvas = () => import('../pages/views/html2canvas.vue');
 const imageNum = () => import('../pages/views/imageNum.vue');
 //imageNum
 const select = () => import('../pages/views/select.vue');
+//动态改变div长度
+const divLength = () => import('../pages/views/divLength.vue');
 
 Vue.use(VueRouter)
 
@@ -77,6 +79,10 @@ export default new VueRouter({
   {
     path: "/select",
     component: select,
+  },
+  {
+    path: "/divLength",
+    component: divLength,
   },
   ]
 })

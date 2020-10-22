@@ -18,6 +18,9 @@ const routeList = [
     }, {
         name: 'select',
         path: 'select'
+    },{
+        name: 'divLength',
+        path: 'divLength'
     }
 ]
 
