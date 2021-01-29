@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="menus">
       <div class="menu-item" v-for="(item,index) in routeList" :key="index">
-        <router-link :to="`/${item.path}`">
+        <router-link :to="`/${item.path}?id=3`">
           <div>{{item.name}}</div>
         </router-link>
       </div>

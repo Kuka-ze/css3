@@ -43,6 +43,7 @@ export default {
     };
   },
   created() {
+    console.log("看这里", this.$route);
     let that = this;
     that.denominator = this.viewTopics[0].number || "";
     console.log("11111", that.denominator);
@@ -62,8 +63,8 @@ export default {
 </script>
 
 <style>
-.divpading{
-    padding: 20px;
+.divpading {
+  padding: 20px;
 }
 .aa {
   width: 200px;
