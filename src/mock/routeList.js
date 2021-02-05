@@ -16,8 +16,8 @@ const routeList = [
         name: 'imageNum',
         path: 'imageNum'
     }, {
-        name: 'select',
-        path: 'select'
+        name: '一维变二维',
+        path: 'twoArray'
     },{
         name: 'divLength',
         path: 'divLength'
