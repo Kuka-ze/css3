@@ -24,6 +24,8 @@ const twoArray = () => import('../pages/views/twoArray.vue');
 //动态改变div长度
 const divLength = () => import('../pages/views/divLength.vue');
 
+const tablePage = () => import('../pages/views/tablePage.vue');
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -83,6 +85,10 @@ export default new VueRouter({
   {
     path: "/divLength",
     component: divLength,
+  },
+  {
+    path: "/tablePage",
+    component: tablePage,
   },
   ]
 })

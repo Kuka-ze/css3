@@ -21,6 +21,9 @@ const routeList = [
     },{
         name: 'divLength',
         path: 'divLength'
+    },{
+        name: 'tablePage',
+        path: 'tablePage'
     }
 ]
 
