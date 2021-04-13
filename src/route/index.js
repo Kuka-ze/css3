@@ -26,6 +26,8 @@ const divLength = () => import('../pages/views/divLength.vue');
 
 const tablePage = () => import('../pages/views/tablePage.vue');
 
+const Cascader = () => import('../pages/views/Cascader.vue');
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -89,6 +91,9 @@ export default new VueRouter({
   {
     path: "/tablePage",
     component: tablePage,
+  }, {
+    path: "/Cascader",
+    component: Cascader,
   },
   ]
 })

@@ -24,6 +24,9 @@ const routeList = [
     },{
         name: 'tablePage',
         path: 'tablePage'
+    },{
+        name: 'Cascader',
+        path: 'Cascader'
     }
 ]
 
