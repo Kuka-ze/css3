@@ -3,97 +3,112 @@ import VueRouter from 'vue-router'
 
 const HomePage = () => import('../components/HomePage.vue');
 const HelloWorld = () => import('../components/HelloWorld.vue');
-const Border = () => import('../pages/border.vue');
-const Radius = () => import('../pages/radius.vue');
-const Background = () => import('../pages/background.vue');
-const FontFace = () => import('../pages/fontFace.vue');
-const Gradients = () => import('../pages/Gradients.vue');
-const Text = () => import('../pages/text.vue');
-const TwoD = () => import('../pages/2D.vue');
-const ThreeD = () => import('../pages/3d.vue');
-// 函数防抖
-const ShakeProof = () => import('../pages/views/shakeProof.vue');
-//图片预览
-const Preview = () => import('../pages/views/preview.vue');
-//html2canvas
-const html2Canvas = () => import('../pages/views/html2canvas.vue');
-//imageNum
-const imageNum = () => import('../pages/views/imageNum.vue');
-//imageNum
-const twoArray = () => import('../pages/views/twoArray.vue');
-//动态改变div长度
-const divLength = () => import('../pages/views/divLength.vue');
-
-const tablePage = () => import('../pages/views/tablePage.vue');
-
-const Cascader = () => import('../pages/views/Cascader.vue');
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   routes: [{
-    path: "/",
+    path: '/',
     component: HomePage,
-  }, {
-    path: "/HelloWorld",
-    component: HelloWorld,
-  },
-  {
-    path: "/border",
-    component: Border,
-  }, {
-    path: "/Radius",
-    component: Radius,
-  }, {
-    path: "/Background",
-    component: Background,
-  }, {
-    path: "/FontFace",
-    component: FontFace,
-  }, {
-    path: "/Gradients",
-    component: Gradients,
-  }, {
-    path: "/TwoD",
-    component: TwoD,
-  }, {
-    path: "/ThreeD",
-    component: ThreeD,
-  },
-  {
-    path: "/Text",
-    component: Text,
-  },
-  {
-    path: "/preview",
-    component: Preview,
-  },
-  {
-    path: "/shakeProof",
-    component: ShakeProof,
-  },
-  {
-    path: "/html2canvas",
-    component: html2Canvas,
-  },
-  {
-    path: "/imageNum",
-    component: imageNum,
-  },
-  {
-    path: "/twoArray",
-    component: twoArray,
-  },
-  {
-    path: "/divLength",
-    component: divLength,
-  },
-  {
-    path: "/tablePage",
-    component: tablePage,
-  }, {
-    path: "/Cascader",
-    component: Cascader,
+    redirect: '/HelloWorld',
+    children: [
+      {
+        path: 'HelloWorld',
+        name: 'HelloWorld',
+        component: HelloWorld,
+        meta: {
+          title: 'HelloWorld'
+        }
+      },
+      {
+        path: 'border',
+        name: 'border',
+        component: () => import('../pages/border.vue')
+      },
+      {
+        path: 'Radius',
+        name: 'Radius',
+        component: () => import('../pages/radius.vue')
+      },
+      {
+        path: 'Background',
+        name: 'Background',
+        component: () => import('../pages/background.vue')
+      },
+      {
+        path: 'FontFace',
+        name: 'FontFace',
+        component: () => import('../pages/fontFace.vue')
+      },
+      {
+        path: 'Gradients',
+        name: 'Gradients',
+        component: () => import('../pages/Gradients.vue')
+      },
+      {
+        path: 'Text',
+        name: 'Text',
+        component: () => import('../pages/text.vue')
+      },
+      {
+        path: 'TwoD',
+        name: 'TwoD',
+        component: () => import('../pages/2D.vue')
+      },
+      {
+        path: 'ThreeD',
+        name: 'ThreeD',
+        component: () => import('../pages/3d.vue')
+      },
+      // 函数防抖
+      {
+        path: 'ShakeProof',
+        name: 'ShakeProof',
+        component: () => import('../pages/views/shakeProof.vue')
+      },
+      //图片预览
+      {
+        path: 'Preview',
+        name: 'Preview',
+        component: () => import('../pages/views/preview.vue')
+      },
+      //html2canvas
+      {
+        path: 'html2canvas',
+        name: 'html2canvas',
+        component: () => import('../pages/views/html2canvas.vue')
+      },
+      //imageNum
+      {
+        path: 'imageNum',
+        name: 'imageNum',
+        component: () => import('../pages/views/imageNum.vue')
+      },
+      //把数组变成而为数组
+      {
+        path: 'twoArray',
+        name: 'twoArray',
+        component: () => import('../pages/views/twoArray.vue')
+      },
+      //动态改变div长度
+      {
+        path: 'divLength',
+        name: 'divLength',
+        component: () => import('../pages/views/divLength.vue')
+      },
+      //element table相关
+      {
+        path: 'tablePage',
+        name: 'tablePage',
+        component: () => import('../pages/views/tablePage.vue')
+      },
+      //element 层级联动多选相关
+      {
+        path: 'Cascader',
+        name: 'Cascader',
+        component: () => import('../pages/views/Cascader.vue')
+      },
+    ]
   },
   ]
 })

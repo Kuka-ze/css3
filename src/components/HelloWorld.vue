@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
     <ul>
-      <router-link to="/border">
+      <router-link to="border">
         <li>边框border</li>
       </router-link>
-      <router-link to="/Radius">
+      <router-link to="Radius">
         <li>圆角</li>
       </router-link>
       <router-link to="/Background">

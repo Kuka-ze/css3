@@ -14,4 +14,8 @@ export default {
 /* #app {
 
 } */
+* {
+  margin: 0;
+  padding: 0;
+}
 </style>
