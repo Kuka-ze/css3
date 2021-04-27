@@ -1,0 +1,16 @@
+/** 下面是flex的公共方法*/
+
+//弹性盒子
+.flex {
+    display: flex;
+}
+
+//垂直居中
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    background: #f00;
+}

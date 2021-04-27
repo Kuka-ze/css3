@@ -22,7 +22,7 @@
         <el-container>
           <el-main style="margin:10px;background:#ffffff;">
             <keep-alive>
-              <router-view />
+              <router-view style="width:100%;height:100%;" />
             </keep-alive>
           </el-main>
         </el-container>
@@ -80,5 +80,8 @@ export default {
 
 .el-aside {
   color: #333;
+}
+.el-main {
+  padding: 0 !important;
 }
 </style>

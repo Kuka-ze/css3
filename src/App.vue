@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -19,4 +19,5 @@ export default {
   padding: 0;
   font-size: 0.2rem;
 }
+@import "./scss/common.scss";
 </style>
