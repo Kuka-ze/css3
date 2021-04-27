@@ -2,7 +2,7 @@
   <div>
     <h1>element 里面table相关</h1>
     <div style="width:50vw">
-      <el-table :data="tableData" style="width: 100%">
+      <el-table :data="tableData" style="width: 100%" @cell-click="handle">
         <el-table-column prop="date" label="日期" width="180"></el-table-column>
         <el-table-column prop="name" label="姓名" width="180"></el-table-column>
         <el-table-column prop="address" label="地址"></el-table-column>
@@ -52,6 +52,12 @@ export default {
         arr.push(item);
       });
       return arr.join(",");
+    },
+    handle(row, column, event, cell) {
+      console.log(row);
+      console.log(column);
+      console.log(event);
+      console.log(cell);
     }
   },
   created() {

@@ -20,7 +20,7 @@
         </el-aside>
 
         <el-container>
-          <el-main>
+          <el-main style="margin:10px;background:#ffffff;">
             <keep-alive>
               <router-view />
             </keep-alive>
@@ -70,6 +70,7 @@ export default {
   /* width: 100vw;
   height: 100vh; */
   height: 100vh;
+  background: #f3f3f3;
 }
 .el-header {
   background-color: #b3c0d1;

@@ -1,5 +1,14 @@
 const routeList = [
     {
+        name:'首页',
+        id:'000',
+        children:[{
+            id:'999',
+            name:'工作台',
+            path: "indexPage"
+        }]
+    },
+    {
         name: 'CSS新特性',
         id: '001',
         children: [

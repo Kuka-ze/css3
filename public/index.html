@@ -7,8 +7,22 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <!-- <link rel="icon" href="<%= BASE_URL %>f1.svg"> -->
   <link rel="shortcut icon" href="./f1.png" type="image/x-icon">
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+  <title>VUE-DEMO</title>
+
 </head>
+<script>
+  function calculate() {
+    var html = document.getElementsByTagName('html')[0];
+    var clientHeight = document.body.clientHeight;
+    var fontSize = (clientHeight * 100) / 1080;
+    html.style.fontSize = fontSize + 'px';
+  }
+  window.onload = function () {
+    calculate();
+    window.addEventListener('resize', calculate);
+  };
+</script>
 
 <body>
   <noscript>
