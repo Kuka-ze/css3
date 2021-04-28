@@ -10,14 +10,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 /* #app {
 
 } */
 * {
   margin: 0;
   padding: 0;
-  font-size: 0.1rem;
+  font-size: 0.15rem;
 }
 @import "./scss/common.scss";
 </style>

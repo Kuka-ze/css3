@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .breadcrumbs {
   margin-bottom: 20px;
 }
@@ -48,6 +48,9 @@ export default {
   width: auto;
   height: 20px;
   cursor: pointer;
+  :hover {
+    color: #1989fa;
+  }
 }
 .flex {
   display: flex;
