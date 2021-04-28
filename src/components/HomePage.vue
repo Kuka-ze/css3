@@ -5,12 +5,21 @@
         <span>admin</span>
       </el-header>
       <el-container style="height: 100%; border: 1px solid #eee">
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246); height:100%; ">
-          <el-menu v-for="(item,index) in routeList" :key="index">
+        <el-aside width="180px" style="height:100%;background:#32384e; ">
+          <el-menu
+            v-for="(item,index) in routeList"
+            :key="index"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            background-color="#32384e"
+            text-color="#fff"
+            active-text-color="#ffd04b"
+          >
             <el-submenu :index="index.toString()">
               <template slot="title">
                 <i class="el-icon-menu"></i>
-                {{item.name}}
+                <span style="color:#fff;">{{item.name}}</span>
               </template>
               <el-menu-item-group v-for="(ite,idx) in item.children" :key="idx">
                 <el-menu-item :index="idx.toString()" @click="toPage(ite)">{{ite.name}}</el-menu-item>
@@ -20,7 +29,7 @@
         </el-aside>
 
         <el-container>
-          <el-main style="margin:10px;background:#ffffff;">
+          <el-main style="margin:20px;">
             <keep-alive>
               <router-view style="width:100%;height:100%;" />
             </keep-alive>
@@ -42,7 +51,7 @@ export default {
     };
   },
   created() {
-    console.log("2222", routeList);
+    // console.log("2222", routeList);
     this.routeList = routeList;
   },
 
@@ -70,16 +79,15 @@ export default {
   /* width: 100vw;
   height: 100vh; */
   height: 100vh;
-  background: #f3f3f3;
+  background: rgb(242, 244, 245);
 }
 .el-header {
   background-color: #b3c0d1;
-  color: #333;
   line-height: 60px;
 }
 
 .el-aside {
-  color: #333;
+  color: #ffffff;
 }
 .el-main {
   padding: 0 !important;
