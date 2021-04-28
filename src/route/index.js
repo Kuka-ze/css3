@@ -11,7 +11,7 @@ export default new VueRouter({
     {
       path: '/',
       component: HomePage,
-      redirect: '/HelloWorld',
+      // redirect: '/HelloWorld',
       children: [
         {
           path: 'HelloWorld',

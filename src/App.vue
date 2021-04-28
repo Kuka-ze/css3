@@ -17,7 +17,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-size: 0.2rem;
+  font-size: 0.1rem;
 }
 @import "./scss/common.scss";
 </style>

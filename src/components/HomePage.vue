@@ -4,7 +4,7 @@
       <el-header style="text-align: right; font-size: 12px">
         <span>admin</span>
       </el-header>
-      <el-container style="height: 100%; border: 1px solid #eee">
+      <el-container style="height: 100%;">
         <el-aside width="180px" style="height:100%;background:#32384e; ">
           <el-menu
             v-for="(item,index) in routeList"
