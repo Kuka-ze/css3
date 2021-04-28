@@ -1,6 +1,6 @@
 <template>
   <div>
-    <breadcrum></breadcrum>
+    <breadcrum :breadcrumbs="breadcrumbs"></breadcrum>
     <el-card class="box-card">首页</el-card>
   </div>
 </template>
@@ -18,7 +18,11 @@ export default {
       breadcrumbs: [
         {
           name: "首页",
-          href: "/"
+          href: ""
+        },
+        {
+          name: "工作台",
+          href: "twoArray"
         }
       ]
     };

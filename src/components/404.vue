@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex">
+    <div class="flex flex-center">
       <div class="bg-div">
         <img src="../assets/403.png" />
       </div>
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-	<style type="text/css">
+	<style  scope>
 * {
   margin: 0;
   padding: 0;
@@ -44,18 +44,14 @@ body {
   margin-top: -150px;
 }
 .flex {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .btn-div {
   width: 14vw;
   height: 100px;
   position: absolute;
   left: 56.5%;
-  top: 56%;
+  top: 62%;
   margin-left: -7vw;
   margin-top: -50px;
 }

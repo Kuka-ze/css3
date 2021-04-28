@@ -1,32 +1,41 @@
 <template>
-  <div class="breadcrumbs flex red">
-    <div class="breadcrumbs-item flex" v-for="(item,index) in breadcrumbs" :key="index" @click="toPage()">{{item.name}}</div>
+  <div class="breadcrumbs flex">
+    <div
+      class="breadcrumbs-item flex"
+      v-for="(item,index) in list"
+      :key="index"
+      @click="toPage(item)"
+    >
+      <span>
+        {{item.name}}
+        <i class="el-icon-arrow-right" v-if="!(index == breadcrumbs.length-1)"></i>
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "breadcrumb",
-  //   props: {},
+  props: {
+    breadcrumbs: Array
+  },
   data() {
     return {
-      //   breadcrumbs: []
-      breadcrumbs: [
-        {
-          name: "首页",
-          href: "/"
-        },
-        {
-          name: "工作台",
-          href: "/"
-        }
-      ]
+      list: []
     };
   },
   methods: {
-    toPage() {
-      console.log("跳转页面");
+    toPage(item) {
+      console.log("跳转页面", item);
+      this.$router.push({
+        path: `/${item.href}`
+      });
     }
+  },
+  mounted() {
+    console.log("breadcrumbs", this.breadcrumbs);
+    this.list = this.breadcrumbs;
   }
 };
 </script>
@@ -35,10 +44,12 @@ export default {
 .breadcrumbs {
   margin-bottom: 20px;
 }
-.breadcrumbs-item{
-  
+.breadcrumbs-item {
+  width: auto;
+  height: 20px;
+  cursor: pointer;
 }
 .flex {
-    display: flex;
+  display: flex;
 }
 </style>
