@@ -1,7 +1,7 @@
 <template>
   <div>
     <breadcrum :breadcrumbs="breadcrumbs"></breadcrum>
-    <el-card class="box-card">首页</el-card>
+    <el-card class="box-card">功能正在开发ing...</el-card>
   </div>
 </template>
 

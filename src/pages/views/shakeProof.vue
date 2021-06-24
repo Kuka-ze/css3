@@ -9,26 +9,24 @@ import { Debounce } from "../../util/utils";
 export default {
   name: "ShakeProof",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
-    return {
-
-    };
+    return {};
   },
   created() {
     // console.log("2222", antiShake);
   },
 
   methods: {
-    getAliyunData: Debounce(function() {
+    getAliyunData: Debounce(function () {
       console.log("11111");
       alert("防抖测试");
     }, 1000),
     getAliyunData1() {
       console.log("111");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -48,5 +46,6 @@ export default {
   background: #0ff;
   text-align: center;
   line-height: 100px;
+  cursor: pointer;
 }
 </style>

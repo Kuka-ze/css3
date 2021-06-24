@@ -3,6 +3,8 @@
 //弹性盒子
 
 .flex {
+    display: -webkit-flex;
+    /* Safari */
     display: flex;
 }
 
@@ -15,4 +17,11 @@
 .red {
     background: #f00;
     color: #fff;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+.flex-between {
+    justify-content: space-between;
 }
