@@ -1,5 +1,7 @@
 # my-css-demo
 
+该项目为vue2 + css+ eleemntui开发的demo
+
 ## 安装依赖
 ```
 yarn install
@@ -14,11 +16,3 @@ yarn serve
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
