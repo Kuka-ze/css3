@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// 渐变组件
 export default {
   name: "border",
   data() {

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// 背景组件
 export default {
   name: "border",
   data() {

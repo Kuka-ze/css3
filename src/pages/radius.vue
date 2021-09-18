@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// 圆角组件
 export default {
   name: "border",
   data() {
@@ -13,7 +14,7 @@ export default {
   created() {},
   methods: {
     test() {
-      console.log("test");
+      console.log("");
     }
   }
 };
