@@ -76,6 +76,10 @@ const routeList = [
                 id: '502',
                 name: 'Cascader',
                 path: 'Cascader'
+            },{
+                id: '503',
+                name: 'upload',
+                path: 'upload'
             }
         ]
     },

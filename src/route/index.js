@@ -118,6 +118,11 @@ export default new VueRouter({
           component: () => import('../pages/views/Cascader.vue')
         },
         {
+          path: 'upload',
+          name: 'upload',
+          component: () => import('../pages/views/upload.vue')
+        },
+        {
           path: '*',
           name: 'error',
           component: () => import('../components/404.vue'),
