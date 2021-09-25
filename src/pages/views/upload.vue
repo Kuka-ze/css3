@@ -14,12 +14,17 @@
     </el-upload>
 
     <div class="martop">下面是用来回显的图片</div>
-    <img v-show="imageUrl" :src="imageUrl" alt="" class="imgwidth" />
+    <!-- <img v-show="imageUrl" :src="imageUrl" alt="" class="imgwidth" /> -->
+
+    <el-image :src="imageUrl" class="imgwidth">
+      <div slot="error" class="image-slot">
+        <i class="el-icon-picture-outline"></i>
+      </div>
+    </el-image>
 
     <el-dialog :visible.sync="dialogVisible">
       <img width="100%" :src="dialogImageUrl" alt="" />
     </el-dialog>
-
   </div>
 </template>
 <script>
@@ -89,6 +94,13 @@ export default {
 .imgwidth {
   width: 100px;
   height: 100px;
+}
+.image-slot {
+  width: 100px;
+  height: 100px;
+}
+.image-slot i {
+  font-size: 100px;
 }
 .hide .el-upload--picture-card {
   display: none;
