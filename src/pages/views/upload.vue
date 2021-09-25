@@ -1,8 +1,11 @@
 <template>
   <div class="main">
     <el-upload
+      :class="{ hide: hideUploadEdit }"
       action=""
-      :on-change="getFile"
+      :on-change="getImageFile"
+      :on-remove="handlePicRemove"
+      :on-preview="handlePicPreview"
       :limit="1"
       list-type="picture-card"
       :auto-upload="false"
@@ -10,8 +13,13 @@
       <i class="el-icon-plus"></i>
     </el-upload>
 
-    <div>下面是用来回显的图片</div>
+    <div class="martop">下面是用来回显的图片</div>
     <img v-show="imageUrl" :src="imageUrl" alt="" class="imgwidth" />
+
+    <el-dialog :visible.sync="dialogVisible">
+      <img width="100%" :src="dialogImageUrl" alt="" />
+    </el-dialog>
+
   </div>
 </template>
 <script>
@@ -19,30 +27,51 @@ export default {
   data() {
     return {
       imageUrl: "",
+      fileList: [],
+      dialogImageUrl: "",
+      dialogVisible: false,
+      hideUploadEdit: false, // 是否隐藏上传按钮
     };
   },
   methods: {
-    getFile(file) {
-      this.getBase64(file.raw).then((res) => {
-        console.log(res.length);
+    // 获取图片信息
+    getImageFile(file, fileList) {
+      console.log("fileList", fileList);
+      this.getImageBase64(file.raw).then((res) => {
+        console.log("res", res);
         this.imageUrl = res;
       });
+      // 大于1张隐藏
+      this.hideUploadEdit = fileList.length >= 1;
     },
-    getBase64(file) {
+    //转换成base64方法
+    getImageBase64(file) {
       return new Promise(function (resolve, reject) {
-        let reader = new FileReader();
-        let imgResult = "";
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-          imgResult = reader.result;
+        let newImagereader = new FileReader();
+        let imgInfo = "";
+        newImagereader.readAsDataURL(file);
+        newImagereader.onload = function () {
+          imgInfo = newImagereader.result;
         };
-        reader.onerror = function (error) {
+        newImagereader.onerror = function (error) {
           reject(error);
         };
-        reader.onloadend = function () {
-          resolve(imgResult);
+        newImagereader.onloadend = function () {
+          resolve(imgInfo);
         };
       });
+    },
+
+    //删除
+    handlePicRemove(file, fileList) {
+      this.hideUploadEdit = fileList.length >= 1;
+      this.imageUrl = "";
+    },
+    //预览
+    handlePicPreview(file) {
+      console.log("file", file);
+      this.dialogImageUrl = file.url;
+      this.dialogVisible = true;
     },
   },
 };
@@ -54,8 +83,14 @@ export default {
   width: 400px;
   height: 500px;
 }
+.martop {
+  margin-top: 20px;
+}
 .imgwidth {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+}
+.hide .el-upload--picture-card {
+  display: none;
 }
 </style>
