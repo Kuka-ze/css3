@@ -1,6 +1,6 @@
 <template>
-  <div>
-    圆角组件
+  <div class="borderradio">
+    圆角组件 
   </div>
 </template>
 
@@ -21,4 +21,9 @@ export default {
 </script>
 
 <style>
+.borderradio{
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+}
 </style>
