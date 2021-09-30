@@ -40,8 +40,8 @@ export default {
     };
   },
   created() {
-    const a = getDateTime();
-    console.log("a", a);
+    const nowTime = getDateTime();
+    console.log("获取当前时间", nowTime);
   },
   methods: {
     // 获取图片信息
