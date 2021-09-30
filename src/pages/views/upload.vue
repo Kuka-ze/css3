@@ -28,6 +28,7 @@
   </div>
 </template>
 <script>
+import { getDateTime } from "../../util/utils";
 export default {
   data() {
     return {
@@ -37,6 +38,10 @@ export default {
       dialogVisible: false,
       hideUploadEdit: false, // 是否隐藏上传按钮
     };
+  },
+  created() {
+    const a = getDateTime();
+    console.log("a", a);
   },
   methods: {
     // 获取图片信息
