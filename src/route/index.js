@@ -123,6 +123,11 @@ export default new VueRouter({
           component: () => import('../pages/views/upload.vue')
         },
         {
+          path: 'newUpload',
+          name: 'newUpload',
+          component: () => import('../pages/views/newUpload.vue')
+        },
+        {
           path: '*',
           name: 'error',
           component: () => import('../components/404.vue'),

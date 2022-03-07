@@ -156,11 +156,14 @@ export default {
         },
       ],
       id: "5",
-      
     };
   },
-  created() {},
-  methods: {},
+  created() {
+    this.getData();
+  },
+  methods: {
+ 
+  },
 };
 </script>
 

@@ -48,6 +48,10 @@ const routeList = [
                 id: '303',
                 name: 'divLength',
                 path: 'divLength'
+            },{
+                id: '304',
+                name: 'newUpload',
+                path: 'newUpload'
             }
         ]
     }, {
